@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-style: normal;
+}
+body, input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "Segoe UI";
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.icon {
+  width: 34px;
+}
+p{
+  color:#0087bb;
+}
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 16px 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+}
+
+
+
+input[type="text"] {
+  padding: 12px 42px 12px 16px;
+  border: 1px solid #01baff;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  color: #01baff;
+  width: calc(100% - 67px); /* Adjust the width calculation to account for button width and padding */
+}
+
+::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+
+button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 13px;
+  top: 7px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"] img {
+  width: 24px;
+  transition: 0.2s all;
+}
+
+button[type="submit"] img:hover {
+  rotate: 180deg;
+}
+
+.chat_box{
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+}
+
+.chat_form{
+  position: relative;
+  display: inline-block;
+}
+
+.result {
+  margin-bottom: 20px;
+  color: #fff !important;
+  background-color:#8e8e8e;
+  border-radius: 10px;
+  padding: 8px;
+  width: 70%;
+}
+
+.question
+{
+  margin-bottom: 20px;
+  color: #fff !important;
+  background-color: #01baff;
+  border-radius: 10px;
+  padding: 8px;
+  width: 70%;
+  margin-left: 30%;
+}
+
+.qa_box {
+    margin-top: 20px;
+    height: calc(100vh - 280px);
+    background-color: rgba(1, 186, 255, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    position: relative;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+    padding-right: 30px
+}
+
+.qa_box::-webkit-scrollbar{
+  width: 14px;
+}
+.qa_box::-webkit-scrollbar-thumb{
+  background-color: #8e8e8e;
+  border-radius: 20px;
+}
+
+.title{
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-height: 400px){
+  .title{
+    display: none;
+  }
+  .qa_box{
+    height: 100%;
+    margin: 0;
+  }
+
+  .body{
+    padding-top: 10px;
+  }
+}

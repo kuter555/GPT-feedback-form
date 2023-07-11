@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <title>Feedback Form</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dots.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  <link rel="script" href="{{ url_for('static', filename='functions.js') }}"/>
+</head>
+
+<body>
+    <div class="title">
+        <img src="{{ url_for('static', filename='dots.png') }}" class="icon" style="rotate:45deg"/>
+        <h3>Feedback Form</h3></div>
+    <div class="qa_box">
+        <div class="chats-area">
+        {% if chats > 2 %}
+            {%for i in range(1, chats)%}
+                {% if result[i][0] != 'user' %}
+                    <div class="result">{{ result[i][1] }}</div>
+                {% else %}
+                    <div class="question">{{ result[i][1] }}</div>
+                {% endif %}
+            {%endfor%}
+
+        {% else %}
+            <div class="result">{{ result[1] }}</div>
+        {% endif %}
+
+        </div></div>
+        <div class="chat_box" >
+            <form class="chat_form" method="post" autocomplete="off">
+                <input type="text" name="get_prompt" id="input_box" placeholder="Leave a review" maxlength="256" required />
+                <button type="submit" >
+                    <img src="{{ url_for('static', filename='dots.png') }}" />
+                </button>
+            </form>
+        </div>
+
+
+</body>
